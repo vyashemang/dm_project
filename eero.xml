@@ -1,0 +1,39 @@
+<eero:entity-mappings
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:eero="http://example.com/">
+    <!--Zero or more repetitions:-->
+    <eero:entity name="Employee" type="Strong" class="Employee">
+        <!--Optional:-->
+        <eero:description>Mock Description</eero:description>
+        <eero:id-class key="id"/>
+        <!--Optional:-->
+        <eero:class-generator/>
+        <!--Optional:-->
+        <eero:attributes>
+            <!--Zero or more repetitions:-->
+            <eero:one-to-one name="Department" property="string" target-entity="Department">string
+            </eero:one-to-one>
+        </eero:attributes>
+        <!--1 or more repetitions:-->
+        <eero:PropertyType name="id" type="xsd:int">string</eero:PropertyType>
+        <eero:PropertyType name="fname" type="xsd:string">string</eero:PropertyType>
+        <eero:PropertyType name="lname" type="xsd:string">string</eero:PropertyType>
+
+    </eero:entity>
+    <eero:entity name="Department" type="Strong" class="Department">
+        <!--Optional:-->
+        <eero:description>Mock Description</eero:description>
+        <eero:id-class key="id"/>
+        <!--Optional:-->
+        <eero:class-generator/>
+        <!--Optional:-->
+        <eero:attributes>
+            <!--Zero or more repetitions:-->
+            <eero:one-to-one name="Employee" property="string" target-entity="Employee">string
+            </eero:one-to-one>
+        </eero:attributes>
+        <!--1 or more repetitions:-->
+        <eero:PropertyType name="id" type="xsd:int">string</eero:PropertyType>
+        <eero:PropertyType name="departmentName" type="xsd:string">string</eero:PropertyType>
+    </eero:entity>
+</eero:entity-mappings>
