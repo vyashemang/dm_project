@@ -64,7 +64,7 @@
                 <xsd:attribute type="xsd:string" name="name"/>
                 <xsd:attribute type="eero:property" name="property"/>
                 <xsd:attribute type="xsd:string" name="target-entity"/>
-                <!--<!--<xsd:attribute type="xsd:string" name="not-null"/> //TODO -->
+                <!--<xsd:attribute type="xsd:string" name="not-null"/> //TODO -->
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -87,8 +87,8 @@
                 <xsd:enumeration value="strong"/>
             </xsd:restriction>
         </xsd:simpleContent>
-    </xsd:complexType>
--->
+    </xsd:complexType>-->
+    
     <xsd:complexType name="id-class">
         <xsd:simpleContent>
             <xsd:extension base="xsd:string">
