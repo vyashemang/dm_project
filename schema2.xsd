@@ -5,22 +5,24 @@
         elementFormDefault="qualified"
         attributeFormDefault="unqualified"
         version="2.0">
-    <element name="animals">
-        <complexType>
-            <sequence>
-                <element name="cat" type="demo:cat">
-
-                </element>
-            </sequence>
-        </complexType>
-    </element>
-
-
-    <complexType name="cat">
+ 
+    <complexType name="Animals">
         <sequence>
-            <element name="name" type="string"></element>
-            <element name="age" type="int"></element>
+            <element name="type" type="string"/>
         </sequence>
     </complexType>
+    
+    <element name ="Cat">
+        <complexType>
+            <complexContent>
+                <extension base="demo:Animals">
+                    <sequence>
+                        <element name="name" type="string"></element>
+                        <element name="age" type="int"></element>
+                    </sequence>
+                </extension>
+            </complexContent>
+        </complexType>
+    </element>
 
 </schema>

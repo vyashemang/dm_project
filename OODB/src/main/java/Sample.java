@@ -14,7 +14,6 @@ public class Sample {
             for (Employee emp1 : l){
                 System.out.println(emp1);
             }
-
         }
         finally {
             db.close();
