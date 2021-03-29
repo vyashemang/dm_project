@@ -5,7 +5,10 @@ import java.util.List;
 
 public class Sample {
     public static void main(String[] args) {
-        Employee emp = new Employee(1, "abc");
+        Employee emp = new Employee();
+        emp.setId(3);
+        emp.setFirstName("rushi");
+        emp.setLastName("xyz");
         ObjectContainer db = Db4o.openFile("Demo");
 
         try{
